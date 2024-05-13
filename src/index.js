@@ -1,4 +1,4 @@
-/* istanbul ignore file */
+/* istanbul ignore file, what is this for, who wrote the comment b4 I changed it? */
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";

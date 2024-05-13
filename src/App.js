@@ -1,4 +1,4 @@
-/* istanbul ignore file */
+/* istanbul ignore file, weird comment again */
 import "./App.scss";
 import Page from "./pages/Home";
 import { DataProvider } from "./contexts/DataContext";
