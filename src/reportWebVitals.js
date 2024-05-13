@@ -1,4 +1,4 @@
-/* istanbul ignore file */
+/* istanbul ignore file, oh it's written by techer jean sebastien and others  */
 const reportWebVitals = (onPerfEntry) => {
   if (onPerfEntry && onPerfEntry instanceof Function) {
     import("web-vitals").then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
