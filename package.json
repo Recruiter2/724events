@@ -17,7 +17,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test a",
     "lint": "eslint .eslintrc.js ./src",
     "format": "prettier ./src --write"
   },
