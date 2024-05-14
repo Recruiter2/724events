@@ -13,9 +13,11 @@ const Slider = () => {
   const nextCard = () => {
     setTimeout(() => setIndex(index < byDateDesc.length ? index + 1 : 0), 5000);
   };
+
   useEffect(() => {
     nextCard();
   });
+  
   return (
     <div className="SlideCardList">
       {byDateDesc?.map((event, idx) => (
