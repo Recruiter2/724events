@@ -6,10 +6,10 @@ L'application est le site d'une agence evenementielle.
 - NodeJS  >= v16.14.1
 
 ## Installation
-- `yarn install` didn't work smh, updated the project with npm instead and then tried to run it can't remember commands
+- `yarn install` 
 
 ## Lancement de l'application
-- `yarn start` didn't work, `npm start` works tho
+- `yarn start` 
 
 ## Tests
 - `yarn test`
