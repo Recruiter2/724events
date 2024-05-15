@@ -6,23 +6,14 @@ import "./style.scss";
 
 const Slider = () => {
   const { data } = useData();
-  /* the data is ok retrieves from json all the arrays with expected objects
-  console.log("********data*********");
-
-  console.log(data);
-  console.log("*****************"); */
 
   const [index, setIndex] = useState(0);
   const byDateDesc = data?.focus.sort((evtA, evtB) =>
     new Date(evtA.date) < new Date(evtB.date) ? -1 : 1
   );
-  console.log("=======bydatedesc=============");
-
-  console.log(byDateDesc);
-  console.log("====================");
+  
   const nextCard = () => {
-    setTimeout(() => setIndex(index < byDateDesc.length ? index + 1 : 0), 5000);
-    console.log(index);
+    setTimeout(() => setIndex(index < (byDateDesc.length - 1) ? index + 1 : 0), 5000);
   };
 
   useEffect(() => {
