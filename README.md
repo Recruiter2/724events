@@ -13,3 +13,6 @@ L'application est le site d'une agence evenementielle.
 
 ## Tests
 - `yarn test`
+
+## Tests auto
+- `yarn test —watch`
