@@ -16,3 +16,8 @@ L'application est le site d'une agence evenementielle.
 
 ## Tests auto
 - `yarn test —watch`
+
+note when adding comments in react 
+//example comment 
+it shoudl be closed it seems as follows :
+//example comment */
