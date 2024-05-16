@@ -9,6 +9,7 @@ const Slider = () => {
 
   const [index, setIndex] = useState(0);
   const byDateDesc = data?.focus.sort((evtA, evtB) =>
+    // y a pas un problème car les images sont déjà dans l'ordre...*/
     new Date(evtA.date) < new Date(evtB.date) ? -1 : 1
   );
   
