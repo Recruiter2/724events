@@ -14,6 +14,7 @@ const Slider = () => {
   );
   
   const nextCard = () => {
+          // ajout de -1 car il n'y a que 3 images (0 1 2)
     setTimeout(() => setIndex(index < (byDateDesc.length - 1) ? index + 1 : 0), 5000);
   };
 
