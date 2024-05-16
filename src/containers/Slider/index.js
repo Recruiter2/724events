@@ -48,7 +48,10 @@ const Slider = () => {
                   key={`${event.id}`}
                   type="radio"
                   name="radio-button"
-                  checked={idx === radioIdx}
+                  // index à la place de idx pour associer l'index au radioIdx
+                  checked={index === radioIdx}
+                  // ajout readOnly pour gérer erreur console : checked without onChange 
+                  readOnly
                 />
               ))}
             </div>
