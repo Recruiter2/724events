@@ -19,6 +19,6 @@ L'application est le site d'une agence evenementielle.
 
 <pre>note when adding comments in react 
 //example comment 
-it shoudl be closed it seems as follows :
+it should be closed it seems as follows :
 //example comment */
 </pre>
