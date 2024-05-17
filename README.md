@@ -19,6 +19,6 @@ L'application est le site d'une agence evenementielle.
 
 <pre>note when adding comments in react 
 //example comment 
-it should be closed it seems as follows :
-//example comment */
+it should have space after  //:
+// example comment 
 </pre>
