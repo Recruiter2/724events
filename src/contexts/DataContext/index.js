@@ -30,7 +30,17 @@ export const DataProvider = ({ children }) => {
     if (data) return;
     getData();
   });
-  
+
+  // on defini la varible last, utilisé dans le footer on calcule le dernier projet réalisé
+  // on trie directement les events par date ; le dernier event est le plus recent
+  const byDateDesc = data?.events.sort((evtA, evtB) =>
+    //  les images desordoné sont ordonée par date desormais
+    new Date(evtA.date) > new Date(evtB.date) ? -1 : 1
+  ); 
+  // on calcul le dernier event et on l'isole
+  const last = byDateDesc?.[0];
+
+  // so here comments for begginer b4 return can insert variable u need
   return (
     <DataContext.Provider
       // eslint-disable-next-line react/jsx-no-constructed-context-values
