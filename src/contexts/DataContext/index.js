@@ -44,7 +44,8 @@ export const DataProvider = ({ children }) => {
   return (
     <DataContext.Provider
       // eslint-disable-next-line react/jsx-no-constructed-context-values
-      value={{
+      // this is a trap the comment above disables helper that's why I struggling so much and didn't notice I need to import last value below 
+      value={{ // here comment for beginner don't forget to export the value u defined above just b4 return
         data,
         error,
       }}
