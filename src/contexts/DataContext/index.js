@@ -48,6 +48,7 @@ export const DataProvider = ({ children }) => {
       value={{ // here comment for beginner don't forget to export the value u defined above just b4 return
         data,
         error,
+        last, // on oublie pas de préciser que l'on renvoi last pour que quand on l'importe ça soit dispo sinon il reste invisible
       }}
     >
       {children}
