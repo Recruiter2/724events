@@ -6,10 +6,9 @@ import "./style.scss";
 
 const Slider = () => {
   const { data } = useData();
-
   const [index, setIndex] = useState(0);
   const byDateDesc = data?.focus.sort((evtA, evtB) =>
-    // y a pas un problème car les images sont déjà dans l'ordre...*/
+    // la ligne suivant trie bien les evenement dans l'ordre par date
     new Date(evtA.date) < new Date(evtB.date) ? -1 : 1
   );
   
