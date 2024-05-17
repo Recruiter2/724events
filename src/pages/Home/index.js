@@ -15,18 +15,8 @@ import { useData } from "../../contexts/DataContext";
 
 
 const Page = () => {
-  // const {last} = useData();
-  // const last = useData().events[useData().events.length - 1];  
-  const { data } =  useData();
-
- console.log("data")
- console.log(data);
-  const byDateDesc = data?.events.sort((evtA, evtB) =>
-    // y a pas un problème car les images sont déjà dans l'ordre... le fonctionnement de l'algorithme est confirmé meme les images desordoné sont ordonée par date desrmais
-    new Date(evtA.date) < new Date(evtB.date) ? -1 : 1
-  );
- // old version where last event was retrieved by index but it's wrong by date needed so it was fixed by adding sorting step by date above
-const last = byDateDesc && byDateDesc.events && byDateDesc.events.length > 0 ? byDateDesc.events[byDateDesc.events.length - 1] : null;
+ 
+  const {last} =  useData();
 
   return <>
     <header>
