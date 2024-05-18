@@ -123,7 +123,7 @@ const Page = () => {
 
         
           
-       {last &&( // on verifie que la variable last n'est pas null
+       
        <EventCard
           imageSrc={last?.cover}
           title={last?.title}
@@ -131,7 +131,7 @@ const Page = () => {
           small
           label="boom"
         />
-        )}
+       
 
       </div>
       <div className="col contact">
