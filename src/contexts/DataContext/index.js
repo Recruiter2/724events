@@ -46,11 +46,16 @@ export const DataProvider = ({ children }) => {
     <DataContext.Provider
       // eslint-disable-next-line react/jsx-no-constructed-context-values
       // this is a trap the comment above disables helper that's why I struggling so much and didn't notice I need to import last value below 
-      value={{ // here comment for beginner don't forget to export the value u defined above just b4 return
-        data,
-        error,
-        last, // on oublie pas de préciser que l'on renvoi last pour que quand on l'importe ça soit dispo sinon il reste invisible
-      }}
+
+      value={useMemo(
+              // here comment for beginner don't forget to export the value u defined above just b4 return
+              () => ({
+              data,
+              error,
+              last, // on oublie pas de préciser que l'on renvoi last pour que quand on l'importe ça soit dispo sinon il reste invisible
+            }),
+            [data, error, last]
+          )}
     >
       {children}
     </DataContext.Provider>
