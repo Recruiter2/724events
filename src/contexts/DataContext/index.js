@@ -38,7 +38,7 @@ export const DataProvider = ({ children }) => {
     //  les images desordoné sont ordonée par date desormais
     new Date(evtA.date) > new Date(evtB.date) ? -1 : 1
   ); 
-  // on calcul le dernier event et on l'isole
+  // on extrait le dernier event dans le tableau trié 
   const last = byDateDesc?.[0];
 
   // so here comments for begginer b4 return can insert variable u need
