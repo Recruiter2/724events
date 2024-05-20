@@ -11,10 +11,18 @@ const PER_PAGE = 9;
 
 const EventList = () => {
   const { data, error } = useData();
+    // mise a jour du state de type à l'aide du bouton select
   const [type, setType] = useState();
   const [currentPage, setCurrentPage] = useState(1);
-  const filteredEvents = ((!type ? data?.events : data?.events) || []).filter(
-    (event, index ) => {
+
+  // filteredevent utilise le useState Type pour filtrer les events possédant le type
+  // indiqué par le bouton Select.
+  // on filtre donc d'abord les events par type avant de filtrer pour la pagination
+
+
+    const filteredEvents = data?.events
+  .filter((event) => event.type === type || !type) // This line of code is a filter function that checks if the type property of an event object is equal to the type variable, or if the type variable is falsy (undefined, null, false, 0, NaN, or an empty string). If either condition is true, the event is included in the filtered list.
+  .filter((event, index) => {
       if (
         (currentPage - 1) * PER_PAGE <= index  &&
         PER_PAGE * currentPage > index
@@ -28,6 +36,7 @@ const EventList = () => {
   const changeType = (evtType) => {
     setCurrentPage(1);
     setType(evtType);
+    
   };
   const pageNumber = Math.floor((filteredEvents?.length || 0) / PER_PAGE) + 1;
   const typeList = new Set(data?.events.map((event) => event.type));
@@ -42,6 +51,7 @@ const EventList = () => {
           <Select
             selection={Array.from(typeList)}
             onChange={(value) => (value ? changeType(value) : changeType(null))}
+            
           />
           <div id="events" className="ListContainer">
             {filteredEvents.map((event) => (
