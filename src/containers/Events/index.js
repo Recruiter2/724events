@@ -27,7 +27,6 @@ const EventList = () => {
         (currentPage - 1) * PER_PAGE <= index  &&
         PER_PAGE * currentPage > index
       ) {
-        console.log(event);
         return true;
       }
       return false;
