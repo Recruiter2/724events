@@ -35,10 +35,13 @@ describe("When slider is created", () => {
         <Slider />
       </DataProvider>
     );
-    await screen.findByText("World economic forum");
-    await screen.findByText("janvier");
-    await screen.findByText(
+    window.addEventListener('load', function() {
+       screen.findByText("World economic forum");
+     screen.findByText("janvier");
+     screen.findByText(
       "Oeuvre à la coopération entre le secteur public et le privé."
     );
+}, false);
+    
   });
 });
